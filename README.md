@@ -2,7 +2,7 @@
 
 Webroot for the **Reference Media Player**, or in short **RMP**
 
-This repository is meant to use with the **Reference Music Player** project https://github.com/tangram67/RMP
+This repository is meant to use with the **Reference Music Player** project on https://github.com/tangram67/RMP
 
 Clone an setup the **RMP** project first and after that install the webroot files from this repository. Please note that the webroot files must be accessible for the user the **RMP** server is running under, e.g. install or clone this repository to the home directory of the given user.
 
