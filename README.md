@@ -12,6 +12,6 @@ Open the configuration folder of the **RMP** service. Usually this folder should
 
 1. Shut down the **RMP** service first
 2. Edit /etc/dbApps/rmp/webserver.conf
-3. Set the webroot entry "DocumentRoot = /path/to/the/webroot/" to the real webroot path in your system
+3. Set the webroot entry **"DocumentRoot = /path/to/the/webroot/"** to the real webroot path in your system (e.g. "/home/<username>/RMP-Webroot")
 
 Restart the **RMP** service and the webinterface should be fully functional. By defaut the URL of the **RMP** will be http://localhost:8099 on the local PC.
