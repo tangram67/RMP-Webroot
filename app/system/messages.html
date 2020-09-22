@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Message Viewer</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Bootstrap radiobutton stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0a0a0a">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0a0a0a">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+	</head>
+
+	<body role="document">
+
+		<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="middle"><img src="[[APP_LOGO]]"></td>
+							<td valign="middle"><h1>[[APP_NAME]]</h1></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>[[APP_HINT]]</p>
+			</div>
+
+			<div class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="top">
+								<h1 class="pageheadermargins">System Message Viewer</h1>
+							</td>
+							<td width="40px" valign="top"><h1 class="pageheadermargins">
+								<a id="idReloadLogs" name="LOADLOG" value="LOADLOG" onclick="onAnchorClick(this);" title="Refresh hardware state" class="info-icon" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-refresh info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+							</h1></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Application logfile</label>
+					<div id="application-log-text" class="col-xs-9">
+						<textarea name="txtAppicationLog" id="txtAppicationLog" class="form-control" rows="20">MSG_APPLICATION_LOG</textarea>
+					</div>
+					<div id="application-log-action" class="col-xs-1">
+						<div class="btn-group-vertical">
+		 					<button id="btnCopyApplicationLog" name="btnCopyApplicationLog" addClick="false" style="display:block;" class="btn btn-default pull-left" onclick="onClipboardClick(this);" title="Click to copy text to clipboard">
+								<span class="glyphicon glyphicon-paperclip" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+							<button id="btnAppLogs" name="LOADLOG" value="LOADLOG" addClick="true" style="display:block;" class="btn btn-default pull-left" title="Click to refresh application log">
+								<span class="glyphicon glyphicon-refresh" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top:20px;"></div>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Exception logfile</label>
+					<div id="exception-log-text" class="col-xs-9">
+						<textarea name="txtExceptionLog" id="txtExceptionLog" class="form-control" rows="20">MSG_EXCEPTION_LOG</textarea>
+					</div>
+					<div id="exception-log-action" class="col-xs-1">
+						<div class="btn-group-vertical">
+							<button id="btnCopyExceptionLog" name="btnCopyExceptionLog" addClick="false" class="btn btn-default pull-left" onclick="onClipboardClick(this);" title="Click to copy text to clipboard">
+								<span class="glyphicon glyphicon-paperclip" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+							<button id="btnExceptLogs" name="LOADLOG" value="LOADLOG" addClick="true" style="display:block;" class="btn btn-default pull-left" title="Click to refresh exception log">
+								<span class="glyphicon glyphicon-refresh" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top:20px;"></div>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Webserver logfile</label>
+					<div id="webserver-log-text" class="col-xs-9">
+						<textarea name="txtWebserverLog" id="txtWebserverLog" class="form-control" rows="20">MSG_WEBSERVER_LOG</textarea>
+					</div>
+					<div id="webserver-log-action" class="col-xs-1">
+						<div class="btn-group-vertical">
+							<button id="btnCopyWebserverLog" name="btnCopyWebserverLog" addClick="false" class="btn btn-default pull-left" onclick="onClipboardClick(this);" title="Click to copy text to clipboard">
+								<span class="glyphicon glyphicon-paperclip" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+							<button id="btnWebLogs" name="LOADLOG" value="LOADLOG" addClick="true" style="display:block;" class="btn btn-default pull-left" title="Click to refresh webserver log">
+								<span class="glyphicon glyphicon-refresh" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Refresh file content</label>
+					<div class="col-xs-9">
+						<button id="btnReloadLogs" name="LOADLOG" value="LOADLOG" addClick="true" class="btn btn-default pull-left" title="Click to refresh file content">
+							<span class="glyphicon glyphicon-refresh" style="pointer-events:none" aria-hidden="true"></span> 
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+
+		<!-- Place own JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/playlistmanager.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/clipboard.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script src="/app/dist/js/system.min.js"></script>
+		<script type="text/javascript">
+			
+			// Set event handler		
+			setButtonEvents();
+
+			// Set active main menu item
+			$(document).ready(function () {
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-system');
+				setMainMenuSwipeEvents();
+				sendReloadEvent();
+
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+			});
+
+		</script>
+	</body>
+</html>

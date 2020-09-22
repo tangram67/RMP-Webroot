@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Session List</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Bootstrap table stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.css" integrity="sha384-4k6aQN6RIQ6JYbvXXejqBZqRCA/nPGUExuhwH377tIB9b6FcP/ii0TnuSsiLsiwk" crossorigin="anonymous">
+		<!-- Bootstrap radiobutton stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0a0a0a">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0a0a0a">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+	</head>
+
+	<body role="document">
+
+		<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+
+			<div class="jumbotron">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="middle"><img src="[[APP_LOGO]]"></td>
+							<td valign="middle"><h1>[[APP_NAME]]</h1></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>[[APP_HINT]]</p>
+			</div>
+
+			<div id="erroneous-header" class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="top">
+								<h1 class="pageheadermargins">[[SESSIONS_HEADER]]</h1>
+							</td>
+							<td width="40px" valign="top">
+								<h1 class="pageheadermargins">
+									<a class="info-icon-static">
+										<span class="glyphicon glyphicon-globe info-glyphicon-small" aria-hidden="true"></span>
+									</a>
+								</h1>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			<div id="default-table-toolbar" class="btn-group" role="group" aria-label="Table page navigation">
+				<a id="btnTableFirst" value="FIRST" class="btn btn-default" role="button" aria-disabled="true" title="Goto first page">
+					<span class="glyphicon glyphicon-step-backward" style="pointer-events:none;" aria-hidden="true"></span>
+				</a>
+				<a id="btnTablePrev" value="PREV" class="btn btn-default" role="button" aria-disabled="true" title="Goto previous page">
+					<span class="glyphicon glyphicon-triangle-left" style="pointer-events:none;" aria-hidden="true"></span>
+				</a>
+				<a id="btnTableNext" value="NEXT" class="btn btn-default" role="button" aria-disabled="true" title="Goto next page">
+					<span class="glyphicon glyphicon-triangle-right" style="pointer-events:none;" aria-hidden="true"></span>
+				</a>
+				<a id="btnTableLast" value="LAST" class="btn btn-default" role="button" aria-disabled="true" title="Goto last page">
+					<span class="glyphicon glyphicon-step-forward" style="pointer-events:none;" aria-hidden="true"></span>
+				</a>
+			</div>
+			<table 
+				id="data-table"
+				data-toggle="table"
+				data-url="/rest/sessions.json"
+				data-cache="false"
+				data-page-size="10"
+				data-page-list="[10, 25, 50, 100, All]"
+				data-show-columns="true"
+				data-show-refresh="true"
+				data-show-toggle="true"
+				data-single-select="true"
+				data-loading-font-size="18px"
+				data-loading-template="tableLoadingMessage"
+				data-select-item-name="default-select-event"
+				data-click-to-select="true"
+				data-side-pagination="server"
+				data-pagination="true"
+				data-toolbar="#default-table-toolbar"
+				data-show-footer="false"
+				data-classes="table table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+						<th data-field="Address">Remote address</th>
+						<th data-field="SID">SID</th>
+						<th data-field="Browser">User agent</th>
+						<th data-field="State">State</th>
+						<th data-field="Requested">Requests</th>
+						<th data-field="Datetime" data-formatter="dateTimeConverter">Last seen</th>
+					</tr>
+				</thead>
+			</table>
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		=============================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.js" integrity="sha384-nNFbqpWdNhhdPeDVkanWjEBNKejyGGlTKQDMEAEGus5cDGzZLbh5rWo43RhMxjHX" crossorigin="anonymous"></script>
+
+		<!-- Place own JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/playlistmanager.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/tableview.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script src="/app/dist/js/sessions.min.js"></script>
+		<script>
+
+			// Get system ISO693 language name, e.g. 'de-DE'
+			var syslang = getSystemLanguage();
+
+			// Convert datetime table entries to human readable strings
+			function dateTimeConverter(value, row, index) {
+				var time = new Date(value);
+				var dates = { day: '2-digit', month: '2-digit', year: 'numeric' };
+				var times = { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+				return time.toLocaleDateString(syslang, dates) + " " + time.toLocaleTimeString(syslang, times);
+			}
+			function tableLoadingMessage(loadingMessage) {
+			  return '<span class="loading-wrap">' +
+				'<span class="loading-text">' +
+				'Loading web sessions, please wait ' +
+				'</span>' +
+				'<span class="glyphicon glyphicon-refresh normal-right-spinner">' +
+				'</span>'
+			}
+
+			// Set mouse events
+			setTableEvents();
+			setNavigationEvents();
+			setSwipeEvents();
+
+			// Set active main menu item
+			$(document).ready(function () {
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-system');
+				setMainMenuSwipeEvents();
+
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+			});
+
+		</script>
+	</body>
+</html>

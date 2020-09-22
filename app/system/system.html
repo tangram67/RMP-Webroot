@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Information</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Bootstrap radiobutton stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+		<!-- Animate stylesheet -->
+		<link rel="stylesheet" href="/comp/animate/dist/css/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous">
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0a0a0a">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0a0a0a">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Popup notifier stylesheet -->
+		<link href="/app/dist/css/popups.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+	</head>
+
+	<body role="document">
+
+		<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="middle"><img src="[[APP_LOGO]]"></td>
+							<td valign="middle"><h1>[[APP_NAME]]</h1></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>[[APP_HINT]]</p>
+			</div>
+
+			<a name="status-1"></a>
+			
+
+			<!--div class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="top">
+								<h1 class="pageheadermargins">Application Overview</h1>
+							</td>
+							<td width="40px" valign="top"><h1 class="pageheadermargins">
+								<a id="idShowSystemInfo" name="SHOWINFO" value="SHOWINFO" onclick="onAnchorClick(this);" title="Show general system information" class="info-icon" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-info-sign info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+							</h1></td>
+						</tr>
+					</tbody>
+				</table>
+			</div-->
+
+
+
+			<div class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="top">
+								<h1 class="pageheadermargins">Application Overview</h1>
+							</td>
+							<td width="85px" valign="top"><h1 class="pageheadermargins">
+								<a id="idShowSystemInfo" name="SHOWINFO" value="SHOWINFO" onclick="onAnchorClick(this);" title="Show general system information" class="info-icon" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-info-sign info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+								<a id="idExecuteDefrag" name="EXECDEFRAG" value="EXECDEFRAG" onclick="onAnchorClick(this);" title="Defrag memory..." class="info-icon-right" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-cog info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+							</h1></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
+			<div class="row">
+				<div id="web-status-group" class="col-sm-4">
+					<ul class="list-group">
+						<a id="web-status-header" href="#" class="list-group-item active" onclick="onHeaderClick('web-status-group');">Webserver<span id="web-status-span" style="float:right; font-size: 16px;" class="glyphicon glyphicon-collapse-up text-right" title="Click collape or expand"></span></a>
+						<div id="web-status-items" class="sublinks collapse">
+							<li class="list-group-item"><span id="REQUEST_COUNT" class="badge">[[REQUEST_COUNT]]</span>Requests</li>
+							<li class="list-group-item" onclick="onRequestsClick(event);" title="View web API calls" style="cursor:pointer;"><span id="VIRTUAL_COUNT" class="badge">[[VIRTUAL_COUNT]]</span><span><u>Workload</u></span></li>
+							<li class="list-group-item" onclick="onSessionsClick(event);" title="View active sessions" style="cursor:pointer;"><span id="SESSION_COUNT" class="badge">[[SESSION_COUNT]]</span><span><u>Sessions</u></span></li>
+							<li class="list-group-item"><span id="REQUESTS_IN_QUEUE" class="badge">[[REQUESTS_IN_QUEUE]]</span>Requests in queue</li>
+							<li class="list-group-item"><span id="ACTIONS_IN_QUEUE" class="badge">[[ACTIONS_IN_QUEUE]]</span>Actions in queue</li>
+							<li class="list-group-item"><span id="WEB_CONNECTIONS" class="badge">[[WEB_CONNECTIONS]]</span>Connections (Total/IPv4/IPv6)</li>
+							<li class="list-group-item"><span id="WEB_SOCKET_COUNT" class="badge">[[WEB_SOCKET_COUNT]]</span>Websockets</li>
+							<li class="list-group-item"><span id="SEND_BYTES" class="badge">[[SEND_BYTES]]</span>Sent data</li>
+							<li class="list-group-item"><span id="REFRESH_INTERVAL" class="badge">[[REFRESH_INTERVAL]] seconds</span>HTML refresh timer</li>
+							<li class="list-group-item"><span id="REFRESH_TIMER" class="badge">[[REFRESH_TIMER]] milliseconds</span>Java refresh timer</li>
+						</div>
+					</ul>
+				</div><!-- /.col-sm-4 -->
+				<div id="app-status-group" class="col-sm-4">
+					<ul class="list-group">
+						<a id="app-status-header" href="#" class="list-group-item active" onclick="onHeaderClick('app-status-group');">Application<span id="app-status-span" style="float:right; font-size: 16px;" class="glyphicon glyphicon-collapse-up text-right" title="Click collape or expand"></span></a>
+						<div id="app-status-items" class="sublinks collapse">
+							<li class="list-group-item"><span id="APP_VER" class="badge">[[APP_VER]]</span>Version</li>
+							<li class="list-group-item"><span id="APP_LICENSE_MODE" class="badge">[[APP_LICENSE_MODE]]</span>License</li>
+							<li class="list-group-item"><span id="APP_START_MEMORY" class="badge">[[APP_START_MEMORY]]</span>Start memory</li>
+							<li class="list-group-item"><span id="APP_CURRENT_MEMORY" class="badge">[[APP_CURRENT_MEMORY]]</span>Current memory</li>
+							<li class="list-group-item"><span id="APP_PEAK_MEMORY" class="badge">[[APP_PEAK_MEMORY]]</span>Peak memory</li>
+							<li class="list-group-item"><span id="APP_CPU_CORES" class="badge">[[APP_CPU_CORES]]</span>Cores/Threads</li>
+							<li class="list-group-item"><span id="APP_CPU_CORES" class="badge">[[APP_CPU_AFFINITY]]</span>Affinity/Isolated/Nice</li>
+							<li class="list-group-item" onclick="onCredentialsClick(event);" title="View user accounts" style="cursor:pointer;"><span id="APP_USER_COUNT" class="badge">[[APP_USER_COUNT]]</span><span><u>User accounts</u></span></li>
+							<li class="list-group-item"><span id="APP_UP_TIME" class="badge">[[APP_UP_TIME]]</span>Uptime</li>
+						</div>
+					</ul>
+				</div><!-- /.col-sm-4 -->
+				<div id="player-status-group" class="col-sm-4">
+					<ul class="list-group">
+						<a id="player-status-header" href="#" class="list-group-item active" onclick="onHeaderClick('player-status-group');">Library<span id="player-status-span" style="float:right; font-size: 16px;" class="glyphicon glyphicon-collapse-up text-right" title="Click collape or expand"></span></a>
+						<div id="player-status-items" class="sublinks collapse">
+							<li class="list-group-item"><span id="PLAYER_ARTIST_COUNT" class="badge">[[PLAYER_ARTIST_COUNT]]</span>Artists</li>
+							<li class="list-group-item"><span id="PLAYER_ALBUM_COUNT" class="badge">[[PLAYER_ALBUM_COUNT]]</span>Albums</li>
+							<li class="list-group-item"><span id="PLAYER_SONG_COUNT" class="badge">[[PLAYER_SONG_COUNT]]</span>Songs</li>
+							<li class="list-group-item" onclick="onErroneousClick(event);" title="View erroneous library items" style="cursor:pointer;"><span id="PLAYER_ERROR_COUNT" class="badge">[[PLAYER_ERROR_COUNT]]</span><span><u>Erroneous songs</u></span></li>
+							<li class="list-group-item"><span id="PLAYER_SONG_SIZE" class="badge">[[PLAYER_SONG_SIZE]]</span>Content size</li>
+							<li class="list-group-item"><span id="PLAYER_SONG_DURATION" class="badge">[[PLAYER_SONG_DURATION]]</span>Duration</li>
+							<li class="list-group-item"><span id="PLAYER_STREAMED_SIZE" class="badge">[[PLAYER_STREAMED_SIZE]]</span>Streamed data</li>
+						</div>
+					</ul>
+				</div><!-- /.col-sm-4 -->
+			</div><!-- /.row -->
+
+			<hr style="margin-bottom: 3px;" />
+			<div class="row">
+				<div class="col-xs-6">
+					<h5><a target="_blank" href="https://www.dbrinkmeier.de/bootstrap/downloads.html">db::solutions</a> &copy; 2017-2020</h5>
+				</div>
+				<div class="col-xs-6">
+					<h5 id="frame-version-text" class="pull-right">jQuery x.x.x / Bootstrap x.x.x</h5>
+				</div>
+			</div>
+
+		</div> <!-- div class="container theme-showcase" role="main" id="main-container" -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-notify/dist/js/bootstrap-notify.min.js" integrity="sha384-sxybKa1ELG0raSRSE/bO9tjQ4n7Iul+trHWbR4Afwm1hFpzj6hsa4HZ7v1c4eqp4" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.js" integrity="sha384-nNFbqpWdNhhdPeDVkanWjEBNKejyGGlTKQDMEAEGus5cDGzZLbh5rWo43RhMxjHX" crossorigin="anonymous"></script>
+	    <script src="/comp/websocket/dist/js/websocket.min.js"></script>
+
+		<!-- Place application JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/playlistmanager.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script src="/app/dist/js/popups.min.js"></script>
+		<script src="/app/dist/js/system.min.js"></script>
+		<script type="text/javascript">
+
+			// Get update trigger via websocket
+			var connected = false;
+			var socket = getSocketUrl();
+		   	console.log('[system.html] Websocket = <' + socket + '>');
+			var webSocket = $.simpleWebSocket({ url: socket, onconnect: onWebSocketConneted, onmessage: onWebSocketMessage, ondisconnect: onWebSocketDisconnected });
+
+			function onWebSocketMessage (message) {
+				if (!!message.location && !!message.action) {
+					if (message.location === "webserver" && message.action === "update") {
+						statusGroupRefresh();
+				   		console.log('[system.html] Websocket received <' + message.location + ':' + message.action + '>');
+					}
+				}
+				connected = true;
+			}
+			function onWebSocketConneted() {
+				console.log('[system.html] Websocket connected.');
+				connected = true;
+			}
+			function onWebSocketDisconnected() {
+				console.log('[system.html] Websocket disconnected.');
+				connected = false;
+			}
+
+			// Refresh by timer fallback
+			function doRefreshTimerAction() {
+				if (!connected || !webSocket.isConnected()) {
+					connected = false;
+					statusGroupRefresh();
+				}
+			}
+
+			// Set active main menu item
+			$(document).ready(function () {
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-system');
+				setMainMenuSwipeEvents();
+				setFrameworkVersion();
+
+				// Set event handler		
+				setButtonEvents();
+				setStatusCollapseEvents();
+
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+
+				// Update status displays
+				statusGroupRefresh();
+
+				// Do cyclic refresh		
+				var webRefreshTimeout = [[WEB_REFRESH_TIMER]];
+				setInterval('doRefreshTimerAction()', webRefreshTimeout); 
+
+				// Check for application update on www.dbrinkmeier.de
+				sendUpdateVersionRequest();
+			});
+
+		</script>
+
+	</body>
+</html>

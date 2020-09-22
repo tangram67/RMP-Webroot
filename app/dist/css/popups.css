@@ -1,0 +1,20 @@
+.alert-popup {
+	background-color: rgb(235, 235, 235);
+	border-color: rgba(88, 88, 88, 0.3);
+	border-radius: 3px;
+	color: rgb(149, 149, 149);
+	padding: 10px;
+}
+.alert-popup > [data-notify="icon"] {
+	height: 50px;
+	margin-right: 12px;
+}
+.alert-popup > [data-notify="title"] {
+	color: rgb(51, 51, 51);
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.alert-popup > [data-notify="message"] {
+	font-size: 100%;
+}

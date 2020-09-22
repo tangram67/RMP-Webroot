@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Simple WebSocket Chat Example</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-simple-websocket/dist/jquery.simple.websocket.min.js"></script>
+</head>
+<body>
+    <h1>jQuery Simple WebSocket Chat Example</h1>
+    <pre id="content" style="height:200px; overflow: auto;"></pre>
+    <input id="message" type="text"/>
+    <script>
+        var webSocket = $.simpleWebSocket({ url: 'ws://127.0.0.1:3000/' });
+
+        webSocket.listen(function(message) {
+            $('#content').prepend(message.text+'\n');
+        });
+
+        $('#message').change(function() {
+
+            webSocket.send({ 'text': this.value }).done(function() {
+                console.log('message send');
+            }).fail(function(e) {
+                // your error handling e. g.
+                console.log(e);
+            });
+
+            this.value = '';
+        });
+
+        $('#message').focus();
+    </script>
+</body>
+</html>

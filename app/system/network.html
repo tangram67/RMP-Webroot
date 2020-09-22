@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Settings</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Bootstrap combobox stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-combobox/dist/css/bootstrap-combobox.min.css" integrity="sha384-BXU6+CR+NY54VZOiF9RDLVIEUOW+N87VWw+IJUMr1eLH3VZXifq1L+Utqa+67qKQ" crossorigin="anonymous">
+		<!-- Bootstrap checkbox stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-checkbox/dist/css/bootstrap-checkbox.min.css" integrity="sha384-keWaQZhU6T+ey9H9OG5ejoaufKMPMswnx//959QHA50I4FRny4VbJ66OvDJe5vUt" crossorigin="anonymous">
+		<!-- Bootstrap radiobutton stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+		<!-- Animate stylesheet -->
+		<link rel="stylesheet" href="/comp/animate/dist/css/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous">
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Popup notifier stylesheet -->
+		<link href="/app/dist/css/popups.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+	</head>
+
+	<body role="document">
+
+		<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="middle"><img src="[[APP_LOGO]]"></td>
+							<td valign="middle"><h1>[[APP_NAME]]</h1></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>[[APP_HINT]]</p>
+			</div>
+
+			<div class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="top">
+								<h1 class="pageheadermargins">Network and NAS Settings</h1>
+							</td>
+							<td width="40px" valign="top"><h1 class="pageheadermargins">
+								<a id="idShowHelp" name="SHOWHELP" value="SHOWHELP" onclick="onAnchorClick(this);" title="Show network help screen" class="info-icon" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-question-sign info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+							</h1></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<a name="group.input.1"></a>
+
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">External DNS hostname</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" name="edHostName" id="edHostName" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="example.dyndns.org:8080" />
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Mount remote file system</label>
+					<div class="col-xs-9">
+						<div class="checkbox">
+							<label>
+								<input id="chkMountPoint" type="checkbox" value="" onchange="onCheckBoxChange(this);">
+								<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+								Enable mounting remote filesystem on storage or NAS devices using the settings below.
+								<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>Set user credentials for Microsoft Windows based shares.</i>
+								<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>Options are used on Linux based filestems only.</i>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Select remote filesystem</label>
+					<div class="col-xs-9">
+						<div id="mount-button-group" class="btn-group pull-left" role="group" aria-label="Mount actions">
+							[[BTN_MOUNT]]
+							[[BTN_UNMOUNT]]
+							<!--button id="btnMountPoint" name="MOUNTFS" value="MOUNTFS" addClick="true" class="btn btn-default pull-left" title="Click to mount remote filesystem">
+								<span class="glyphicon glyphicon-ok" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+							<button id="btnUnmountPoint" name="UNMOUNTFS" value="UNMOUNTFS" addClick="true" class="btn btn-default pull-left" title="Click to unmount remote filesystem">
+								<span class="glyphicon glyphicon-remove" style="pointer-events:none" aria-hidden="true"></span> 
+							</button-->
+						</div>
+						<div class="span4 pull-left">
+							<p>&nbsp;</p>
+						</div>
+						[[REMOTE_FILE_SYSTEMS]]
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Remote path (Share)</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" name="edRemotePath" id="edRemotePath" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="." />
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Local path (Target)</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" name="edLocalPath" id="edLocalPath" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="." />
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Mount options (NFS)</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" name="edMountOptions" id="edMountOptions" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="vers=3,rw,nolock,noatime" />
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Username and password (SMB)</label>
+					<div class="col-xs-9">
+						<div class="row">
+							<div class="col-xs-6">
+								<input type="text" class="form-control" name="edUserName" id="edUserName" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="name" />
+							</div>
+							<!--div class="col-xs-6">
+								<input type="password" class="form-control" name="edUserPassword" id="edUserPassword" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="password" />
+							</div-->
+							<div class="col-xs-6">
+								<div class="input-group">
+									<span class="input-group-btn">
+										<button name="btnVisibility" id="btnVisibility" class="btn btn-default" onclick="togglePasswordVisibility();" title="Show password">
+											<span name="spnVisibility" id="spnVisibility" class="glyphicon glyphicon-eye-open" style="pointer-events:none" aria-hidden="true"></span>
+										</button>
+									</span>
+									<input type="password" class="form-control" name="edUserPassword" id="edUserPassword" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Password" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Mount state</label>
+					<div id="mount-status-label" class="col-xs-9">
+						<span style="display: block; text-align: center; padding-top: 9px; padding-bottom: 9px; font-size: 14px;" href="#" class="label [[MOUNT_STATUS_COLOR]]" onclick="onStatusMessageClick(event);" title="Click to view system messages">[[MOUNT_STATUS_CAPTION]]</span>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Save settings</label>
+					<div class="col-xs-9">
+						<button id="btnSave" name="SAVE" value="SAVE" addClick="true" class="btn btn-default pull-left" title="Click to save settings">
+							<span class="glyphicon glyphicon-check" style="pointer-events:none" aria-hidden="true"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-combobox/dist/js/bootstrap-combobox.min.js" integrity="sha384-Dix1YGgkL2MaQn1wpLvi/7J10vuHBZbaDOBLN+esgT/vvnw3lFd+GrtQsW3o0rNs" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-notify/dist/js/bootstrap-notify.min.js" integrity="sha384-sxybKa1ELG0raSRSE/bO9tjQ4n7Iul+trHWbR4Afwm1hFpzj6hsa4HZ7v1c4eqp4" crossorigin="anonymous"></script>
+
+		<!-- Place own JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/playlistmanager.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script src="/app/dist/js/popups.min.js"></script>
+		<script src="/app/dist/js/network.min.js"></script>
+		<script type="text/javascript">
+			
+			// Actions on document ready		
+			$(document).ready(function(){
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-settings');
+				setMainMenuSwipeEvents();
+
+				// Apply combobox class to DOM elements		
+				setSelectEvents();		
+
+				// Set event handler
+				setButtonEvents();
+				setInputEvents();
+
+				// Activate list boxes
+				setListBoxes();			
+
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+
+				// Get and show player config
+				getNetworkConfig();
+
+				// Set AJAXed refresh timer
+				var webRefreshTimeout = [[WEB_REFRESH_TIMER]];
+				setInterval('getMountStatusUpdate()', webRefreshTimeout / 2); 
+			});
+
+		</script>
+	</body>
+</html>

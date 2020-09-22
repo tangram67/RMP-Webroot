@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+	<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+	<meta name="copyright" content="Dirk Brinkmeier db Application">
+    <meta name="author" content="Dirk Brinkmeier db Application">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico">
+    <title>RMP Settings</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+    <!-- Bootstrap theme -->
+    <!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+    <!-- Bootstrap combobox stylesheet -->
+    <link rel="stylesheet" href="/comp/bootstrap-combobox/dist/css/bootstrap-combobox.min.css" integrity="sha384-BXU6+CR+NY54VZOiF9RDLVIEUOW+N87VWw+IJUMr1eLH3VZXifq1L+Utqa+67qKQ" crossorigin="anonymous">
+    <!-- Bootstrap checkbox stylesheet -->
+    <link rel="stylesheet" href="/comp/bootstrap-checkbox/dist/css/bootstrap-checkbox.min.css" integrity="sha384-keWaQZhU6T+ey9H9OG5ejoaufKMPMswnx//959QHA50I4FRny4VbJ66OvDJe5vUt" crossorigin="anonymous">
+    <!-- Bootstrap radiobutton stylesheet -->
+    <link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <div id="main-menu-container">
+		[[NAVBAR_MAIN_MENU]]
+	</div> <!-- main-menu-container -->
+
+    <div class="container theme-showcase" role="main" id="main-container">
+
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+			<h1>Reference Music Player</h1>
+			<p>Powered by db Application RAD.web<sup>&copy;</sup></p>
+		</div>
+
+		<div class="page-header">
+			<h1>Settings</h1>
+		</div>
+
+		<a name="group.combos.2"></a>
+
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label">Output device</label>
+				<div class="col-xs-9">
+					<button id="btnRescanAudio" name="SCANAUDIO" value="SCANAUDIO" addClick="true" class="btn btn-default pull-left" title="Click to rescan sound hardware">
+						<span class="glyphicon glyphicon-refresh" style="pointer-events:none" aria-hidden="true"></span> 
+					</button>
+					<div class="span4 pull-left">
+						<p>&nbsp;</p>
+					</div>
+					<select class="form-control combobox" name="cbxDeviceList" id="cbxDeviceList" readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+						[[PLAYER_DEVICE_LIST]]
+					</select>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label">Rescan library</label>
+				<div class="col-xs-9">
+					<div id="default-table-toolbar" class="btn-group pull-left" role="group" aria-label="Table page navigation">
+						<button id="btnRescan" name="RESCAN" value="RESCAN" addClick="true" class="btn btn-default" title="Click to rescan library">
+							<span class="glyphicon glyphicon-refresh" style="pointer-events:none" aria-hidden="true"></span> 
+						</button>
+						<button id="btnRebuild" name="REBUILD" value="REBUILD" addClick="true" class="btn btn-default" title="Click to rebuild library">
+							<span class="glyphicon glyphicon-repeat" style="pointer-events:none" aria-hidden="true"></span> 
+						</button>
+						<button id="btnClear" name="CLEAR" value="CLEAR" addClick="true" class="btn btn-default" title="Click to empty library">
+							<span class="glyphicon glyphicon-trash" style="pointer-events:none" aria-hidden="true"></span> 
+						</button>
+					</div>
+					<div class="span4 pull-left">
+						<p>&nbsp;</p>
+					</div>
+					<!--button id="btnClear" name="CLEAR" value="CLEAR" addClick="true" class="btn btn-default pull-left" title="Click to clean library">
+						<span class="glyphicon glyphicon-trash" style="pointer-events:none" aria-hidden="true"></span> 
+					</button>
+					<div class="span4 pull-left">
+						<p>&nbsp;</p>
+					</div-->
+					<div id="scanner-status-label" style="padding-top: 7px;" class="pull-left">
+						<span style="padding-top: 7px; padding-bottom: 7px; font-size: 14px;" class="label [[SCANNER_STATUS_COLOR]]" onclick="onErroneousClick(event);" title="Click to view erroneous files">[[SCANNER_STATUS_CAPTION]]</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label">Local media mounts</label>
+				<div class="col-xs-9">
+					<button id="btnRescanDrives" name="SCANDRIVES" value="SCANDRIVES" addClick="true" class="btn btn-default pull-left" title="Click to rescan local filesystem mounts">
+						<span class="glyphicon glyphicon-refresh" style="pointer-events:none" aria-hidden="true"></span> 
+					</button>
+					<div class="span4 pull-left">
+						<p>&nbsp;</p>
+					</div>
+					<select class="form-control combobox" name="cbxDriveList" id="cbxDriveList" readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+						[[LOCAL_DRIVE_LIST]]
+					</select>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label">Library path</label>
+				<div class="col-xs-9">
+					<div class="input-group">
+						<input type="text" class="form-control" name="edLibraryPath" id="edLibraryPath" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="[[PLAYER_LIBRARY_PATH]]" />
+						<span class="input-group-btn">
+							<button id="btnBrowseLibrary" name="BROWSELIBRARY" value="BROWSELIBRARY" addClick="true" class="btn btn-default" title="Click to browse media folders">
+								<span class="glyphicon glyphicon-folder-open" style="pointer-events:none" aria-hidden="true"></span> 
+							</button>
+						</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label">File pattern</label>
+				<div class="col-xs-9">
+					<input type="text" class="form-control" name="edFilePattern" id="edFilePattern" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="*.???" />
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label">Library scanner options</label>
+				<div class="col-xs-9">
+					<div class="checkbox">
+						<label>
+							<input id="chkGroupNameSwap" type="checkbox" value="" onchange="onCheckBoxChange(this);">
+							<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+							Allow group name swapping<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>Use group name as artist name</i>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="chkTheBandPrefixSwap" type="checkbox" value="" onchange="onCheckBoxChange(this);">
+							<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+							Allow "The Band" prefix swapping<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>Treat "The Doors" as "Doors, The" to file under "D"</i>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="chkDeepNameInspection" type="checkbox" value="" onchange="onCheckBoxChange(this);">
+							<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+							Allow deep name inspection<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>File "Ludwig van Beethoven" under "L" and "B"</i>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="chkVariousArtistsRename" type="checkbox" value="" onchange="onCheckBoxChange(this);">
+							<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+							Allow "Various Artists" rename<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>Show files in various artists folders as "Various Artists"</i>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="chkArtistNameRestore" type="checkbox" value="" onchange="onCheckBoxChange(this);">
+							<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+							Allow artist name restore<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>Restore "Davis, Miles" to "Miles Davis"</i>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="chkFullNameSwap" type="checkbox" value="" onchange="onCheckBoxChange(this);">
+							<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+							Allow full name swapping<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>Use band tag as artist if band name is shorter</i>
+						</label>
+					</div>
+					<!--div class="checkbox disabled">
+						<label>
+							<input type="checkbox" value="" onchange="onCheckBoxChange(this);" disabled>
+							<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+							Option is disabled<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>For informational purposes only</i>
+						</label>
+					</div-->
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label">Save settings</label>
+				<div class="col-xs-9">
+					<button id="btnSave" name="SAVE" value="SAVE" addClick="true" class="btn btn-default btn-warning pull-left" title="Click to save settings">
+						<span class="glyphicon glyphicon-check" style="pointer-events:none" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/comp/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+    <script src="/comp/bootstrap-combobox/dist/js/bootstrap-combobox.min.js" integrity="sha384-Dix1YGgkL2MaQn1wpLvi/7J10vuHBZbaDOBLN+esgT/vvnw3lFd+GrtQsW3o0rNs" crossorigin="anonymous"></script>
+
+    <!-- Place own JavaScripts here (jQuery loaded before!)
+    =============================================================== -->
+    <script src="/app/dist/js/messagedialog.min.js"></script>
+    <script src="/app/dist/js/playlistmanager.min.js"></script>
+    <script src="/app/dist/js/mainmenu.min.js"></script>
+    <script src="/app/dist/js/system.min.js"></script>
+	<script type="text/javascript">
+		
+		// Set AJAXed refresh timer
+		var webRefreshTimeout = [[WEB_REFRESH_TIMER]];
+		setInterval('statusLabelRefresh()', webRefreshTimeout); 
+
+		// Actions on document ready		
+		$(document).ready(function(){
+
+			// Apply combobox class to DOM elements		
+			setSelectEvents();		
+
+			// Set active main menu item
+			setActiveMenuItem('#mn-settings');
+
+			// Get and show player config
+			getPlayerConfig();
+
+		});
+
+		// Set event handler
+		setButtonEvents();
+
+	</script>
+
+  </body>
+</html>

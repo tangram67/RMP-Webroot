@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Help Pages</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Pace page loading progress bar -->
+		<link rel="stylesheet" href="/comp/pace/dist/css/pace-std-theme.css" integrity="sha384-m6HC/gM2DiqzBNdO0QqBjE6tm88EBFsHSh2feLFUkFaP/gclhZOseX/Ql+Xb5BXh" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0a0a0a">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0a0a0a">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+
+	</head>
+
+  	<body role="document" onload="onBodyLoad()">
+	    	<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="middle"><img src="[[APP_LOGO]]"></td>
+							<td valign="middle"><h1>[[APP_NAME]]</h1></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>[[APP_HINT]]</p>
+			</div>
+
+			<div class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="top">
+								<h1 class="pageheadermargins">Application Help Page</h1>
+							</td>
+							<td width="40px" valign="top"><h1 class="pageheadermargins">
+								<a id="idPrintHelp" name="PRINT" value="PRING" onclick="printPageClick();" title="Print help pages" class="hidden-print info-icon" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-print info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+							</h1></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+<!--div class="Box mb-3 clearfix">
+  <div class="d-flex flex-column flex-md-row">
+    <div class="p-3 col-md-6">
+      <svg height="32" class="octicon octicon-law text-gray-dark float-left mr-2" viewBox="0 0 14 16" version="1.1" width="28" aria-hidden="true"><path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z"></path></svg>
+      <h3 class="mt-0 mb-2 h4"><strong>GNU General Public License v2.0</strong></h3>
+      <p class="mb-0 text-gray text-small pr-2">The GNU GPL is the most widely used free software license and has a strong copyleft requirement. When distributing derived works, the source code of the work must be made available under the same license. There are multiple variants of the GNU GPL, each with different requirements.</p>
+    </div>
+
+    <div class="d-flex px-3 col-md-6 flex-column flex-sm-row pb-sm-3">
+        <div class="pb-3 col-sm-4 pt-md-2">
+          <h4 class="mt-1 mb-2 h5"><strong>Permissions</strong></h4>
+          <ul style="padding-left: 2px; list-style-type: none;">
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-check text-success ml-n3 v-align-middle" viewBox="0 0 12 16" version="1.1" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+                <span class="v-align-middle" title="This software and derivatives may be used for commercial purposes.">
+                  Commercial use
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-check text-success ml-n3 v-align-middle" viewBox="0 0 12 16" version="1.1" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+                <span class="v-align-middle" title="This software may be modified.">
+                  Modification
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-check text-success ml-n3 v-align-middle" viewBox="0 0 12 16" version="1.1" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+                <span class="v-align-middle" title="This software may be distributed.">
+                  Distribution
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-check text-success ml-n3 v-align-middle" viewBox="0 0 12 16" version="1.1" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+                <span class="v-align-middle" title="This software may be used and modified in private.">
+                  Private use
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="pb-3 col-sm-4 pt-md-2">
+          <h4 class="mt-1 mb-2 h5"><strong>Limitations</strong></h4>
+          <ul style="padding-left: 2px; list-style-type: none;">
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-x text-red ml-n3 v-align-middle" viewBox="0 0 12 16" version="1.1" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+                <span class="v-align-middle" title="This license includes a limitation of liability.">
+                  Liability
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-x text-red ml-n3 v-align-middle" viewBox="0 0 12 16" version="1.1" height="17" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+                <span class="v-align-middle" title="The license explicitly states that it does NOT provide any warranty.">
+                  Warranty
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="pb-3 col-sm-4 pt-md-2">
+          <h4 class="mt-1 mb-2 h5"><strong>Conditions</strong></h4>
+          <ul style="padding-left: 2px; list-style-type: none;">
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-info text-blue ml-n3 v-align-middle" viewBox="0 0 14 16" version="1.1" height="14" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+                <span class="v-align-middle" title="A copy of the license and copyright notice must be included with the software.">
+                  License and copyright notice
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-info text-blue ml-n3 v-align-middle" viewBox="0 0 14 16" version="1.1" height="14" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+                <span class="v-align-middle" title="Changes made to the code must be documented.">
+                  State changes
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-info text-blue ml-n3 v-align-middle" viewBox="0 0 14 16" version="1.1" height="14" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+                <span class="v-align-middle" title="Source code must be made available when the software is distributed.">
+                  Disclose source
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" style="vertical-align: middle;" class="octicon octicon-info text-blue ml-n3 v-align-middle" viewBox="0 0 14 16" version="1.1" height="14" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+                <span class="v-align-middle" title="Modifications must be released under the same license when distributing the software. In some cases a similar or related license may be used.">
+                  Same license
+                </span>
+              </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div-->
+
+			<div id="application-help-body">
+
+			</div><!-- id="application-help-body" -->
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		=============================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/pace/dist/js/pace.min.js" integrity="sha384-q3C2DeAqL0GF5MQYIh4fPSLLh05bGqJ+acf7GEXABdSsjhr/wbFVsnEERMrP4+Zg" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+
+		<!-- Place own JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script>
+
+			function printPageClick() {
+				window.print();
+			}
+
+			// Adjust anchor positioning by navbar height
+			var doAdditionalShift = function() {
+				var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+				var offset = isChrome ? -65 : -50;
+				scrollBy(0, offset);
+			};
+
+			window.addEventListener("hashchange", doAdditionalShift);
+			function onBodyLoad() {
+				if (window.location.hash) doAdditionalShift();
+			}
+
+			// Page loaded
+			$(document).ready(function () {
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-system');
+				setMainMenuSwipeEvents();
+
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+
+				// Load dynamic content
+				$("#application-help-body").load("/rest/mainhelp.html");
+			});
+	
+		</script>
+	</body>
+</html>

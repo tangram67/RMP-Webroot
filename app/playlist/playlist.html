@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Playlist</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Bootstrap table stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.css" integrity="sha384-4k6aQN6RIQ6JYbvXXejqBZqRCA/nPGUExuhwH377tIB9b6FcP/ii0TnuSsiLsiwk" crossorigin="anonymous">
+		<!-- Reorder row stylesheet for bootstrap table -->
+		<link rel="stylesheet" href="/comp/bootstrap-table/1.17.1/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.min.css" integrity="sha384-10M1Sb5TezE2MNJhH2I+vCxyjVusXdqlrbRNeWgajfl6sTykUbC9BgzlCdyAidTq" crossorigin="anonymous">
+
+		<!-- Bootstrap radiobutton stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+		<!-- Animate stylesheet -->
+		<link rel="stylesheet" href="/comp/animate/dist/css/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous">
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0a0a0a">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0a0a0a">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Popup notifier stylesheet -->
+		<link href="/app/dist/css/popups.min.css" rel="stylesheet">
+		<!-- Popup table drag and drop design stylesheet -->
+		<link href="/app/dist/css/table-drag-and-drop.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+		<!-- Bootstrap-table design stylesheet -->
+		<link href="/app/dist/css/table-borderless.min.css" rel="stylesheet">
+	</head>
+
+	<body role="document">
+
+		<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+
+			<div id="playlist-header" class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td valign="top">
+								<h1 class="pageheadermargins">[[PLAYLIST_HEADER]]</h1>
+							</td>
+							<td width="75px" valign="top"><h1 class="pageheadermargins">
+								<a id="btnExportPlaylist" href="[[PLAYLIST_EXPORT_URL]]" download="[[PLAYLIST_EXPORT_NAME]]" title="Export playlist as M3U file..." class="info-icon" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-music info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+								<a id="idShowHelp" name="SHOWHELP" value="SHOWHELP" onclick="onAnchorClick(this, 3001);" title="Show track help screen" class="info-icon-right" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-question-sign info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+							</h1></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="songs-table-toolbar" class="btn-group" role="group" aria-label="Table page navigation">
+				<div class="btn-group" role="group" aria-label="Table page navigation">
+					<a id="btnTableFirst" value="FIRST" class="btn btn-default" role="button" aria-disabled="true" title="Goto first page">
+						<span class="glyphicon glyphicon-step-backward" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+					<a id="btnTablePrev" value="PREV" class="btn btn-default" role="button" aria-disabled="true" title="Goto previous page">
+						<span class="glyphicon glyphicon-triangle-left" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+					<a id="btnTableNext" value="NEXT" class="btn btn-default" role="button" aria-disabled="true" title="Goto next page">
+						<span class="glyphicon glyphicon-triangle-right" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+					<a id="btnTableLast" value="LAST" class="btn btn-default" role="button" aria-disabled="true" title="Goto last page">
+						<span class="glyphicon glyphicon-step-forward" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+				</div>
+				<div class="span4 pull-left">
+					<p>&nbsp;</p>
+				</div>
+				<a id="btnToggleEdit" value="TOGGLE" class="btn btn-default" role="button" aria-disabled="true" onclick="onToggleEditClick();" title="Drag and drop rows">
+					<span class="glyphicon glyphicon-option-horizontal" style="pointer-events:none;" aria-hidden="true"></span>
+				</a>
+			</div>
+			<table 
+				id="data-table"
+				data-toggle="table"
+				data-url="/rest/playlist.json"
+				data-cache="false"
+				data-page-size="[[TABLE_ROW_COUNT]]"
+				data-page-list="[10, 25, 50, 100, All]"
+				data-show-columns="true"
+				data-show-refresh="true"
+				data-show-toggle="true"
+				data-single-select="true"
+				data-loading-font-size="18px"
+				data-loading-template="tableLoadingMessage"
+				data-show-search-clear-button="true"
+				data-select-item-name="playlist-select-event"
+				data-click-to-select="true"
+				data-side-pagination="server"
+				data-pagination="true"
+				data-search="true"
+				data-search-align="right"
+				data-toolbar="#songs-table-toolbar"
+				data-show-footer="false"
+				data-reorderable-rows="false"
+				data-use-row-attr-func="false"
+				data-classes="table table-hover table-bordered table-inner-borderless table-striped">
+				<thead>
+					<tr>
+						<th data-field="image" data-width=40 data-show-header=false data-formatter="thumbNailLoader">Cover</th>
+						<th data-field="Track">Track</th>
+						<th data-field="Displayartist">Artist</th>
+						<th data-field="Album">Album</th>
+						<th data-field="Displaytitle">Title</th>
+						<!--th data-field="Time" data-width=65>Time</th-->
+						<th data-field="Time" data-width=65 data-cell-style="cellStyleLoader">Time</th>
+						<th data-formatter="tableActionLoader" data-width="60" data-class="text-center">Play</th>
+					</tr>
+				</thead>
+			</table>
+
+			<!-- Playlist context menu -->
+			[[PLAYLIST_CONTEXT_MENU]]
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		=============================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table-dnd/dist/jquery.tablednd.min.js" integrity="sha384-Z0YQ2a7R0AnPGKZxQ4W+QRXKitdYmSOnBvUYh97BRSpYRVnH2ZaOxn9/OhbRePIm" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.js" integrity="sha384-nNFbqpWdNhhdPeDVkanWjEBNKejyGGlTKQDMEAEGus5cDGzZLbh5rWo43RhMxjHX" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/1.17.1/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" integrity="sha384-QIhrFQzKP/pvePoKIB872PNCusa/u7BzZUsUOQ4IFwlhNzYFxCqy74yb7OMAh9Tn" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table-contextmenu/dist/js/bootstrap-table-contextmenu.min.js" integrity="sha384-Wj+2wn05iKn1cAazUr7gGA1c8GjfCjm5/IqZO0UP3eofFbWVzL2FhI9CAo6bZ76T" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-notify/dist/js/bootstrap-notify.min.js" integrity="sha384-sxybKa1ELG0raSRSE/bO9tjQ4n7Iul+trHWbR4Afwm1hFpzj6hsa4HZ7v1c4eqp4" crossorigin="anonymous"></script>
+
+		<!-- Place own JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/playlistmanager.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/tableview.min.js"></script>
+		<script src="/app/dist/js/popups.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script src="/app/dist/js/contextmenu.min.js"></script>
+		<script src="/app/dist/js/playlist.min.js"></script>
+		<script>
+			function thumbNailLoader(value, row, index) {
+				return "<img addHover=\"true\" addClick=\"false\" path=" + row.URL + " src=/rest/thumbnails/" + row.Albumhash + "-32.jpg>";
+			}
+			function cellStyleLoader(value, row, index, field) {
+				if (field === 'Time') {
+					return {
+						// css: { 'dnd-enabled' : 'dnd-enabled' },
+						classes: 'dnd-enabled'
+					}
+				}
+				return {};
+			}
+			function tableActionLoader(value, row, index) {
+				return [
+					"<div oncontextmenu=\"return false;\" class=\"btn-group\" role=\"group\">",
+					" <button value=\"PLAYSONG\" tvname=\"" + row.Originaltitle + "\" hash=\"" + row.Filehash + "\" playlist=\"" + row.Playlist + "\" onclick=\"onActionButtonClick(event);\" oncontextmenu=\"return false;\" class=\"btn btn-responsive-md btn-default\" data-toggle=\"tooltip\" title=\"Play &quot;" + row.Originaltitle + "&quot;\">",
+					"  <span class=\"glyphicon glyphicon-play\" style=\"pointer-events:none;\" aria-hidden=\"true\"></span>",
+					" </button>",
+					"</div>"
+				].join('');
+			}			
+			function tableLoadingMessage(loadingMessage) {
+			  return '<span class="loading-wrap">' +
+				'<span class="loading-text">' +
+				'Loading playlist entries, please wait ' +
+				'</span>' +
+				'<span class="glyphicon glyphicon-refresh normal-right-spinner">' +
+				'</span>'
+			}
+
+			// Set popup menus before assigning other event handlers!		
+			setTablePopupMenu();
+
+			// Set mouse events
+			setSwipeEvents();
+			setTableEvents();
+			setImageEvents();
+			setButtonEvents();
+			setNavigationEvents();
+
+			// Set active main menu item
+			$(document).ready(function () {
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-playlists');
+				setMainMenuSwipeEvents();
+
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+
+				// Update status displays
+				statusGroupRefresh();
+
+				// Do cyclic refresh		
+				var webRefreshTimeout = [[WEB_REFRESH_TIMER]];
+				setInterval('statusGroupRefresh()', webRefreshTimeout); 
+			});
+
+		</script>
+	</body>
+</html>

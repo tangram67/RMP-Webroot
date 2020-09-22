@@ -1,0 +1,52 @@
+/* "Modern UI" styles for multi level menus */
+.dropdown-submenu > .dropdown-menu {
+	-webkit-border-radius: 0 0px 0px 0px;
+	-moz-border-radius: 0 0px 0px;
+	border-radius: 0 0px 0px 0px;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+	-webkit-border-radius: 0px 0 0px 0px;
+	-moz-border-radius: 0px 0 0px 0px;
+	border-radius: 0px 0 0px 0px;
+}
+
+/* "Modern UI" styles for button groups */
+.btn-group > .btn-group:last-child > .btn {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.btn-group-vertical > .btn:first-child:not(:last-child) {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.btn-group-vertical > .btn:last-child:not(:first-child) {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.modal-header-custom {
+	border-radius: 0px 0px 0 0;
+}
+
+
+/* Squared check boxes */
+.checkbox .cr {
+	border-radius: 0;
+}
+
+/* Leave bages rounded */
+.badge {
+	border-radius: 10px;
+}
+
+/* Squared callouts */
+.bs-callout {
+	border-radius: 0;
+}

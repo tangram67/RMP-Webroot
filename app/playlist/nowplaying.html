@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Now playing...</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Bootstrap table stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.css" integrity="sha384-4k6aQN6RIQ6JYbvXXejqBZqRCA/nPGUExuhwH377tIB9b6FcP/ii0TnuSsiLsiwk" crossorigin="anonymous">
+		<!-- Lightbox stylesheet -->
+		<link rel="stylesheet" href="/comp/lightbox/dist/css/lightbox.min.css" integrity="sha384-KDnR5o5XlazewfnBQYTE+evTvDnUGilJ43NsC1mkwkYUYQZVI1ntdXI5+/Mp/PHR" crossorigin="anonymous">
+		<!-- Bootstrap radiobutton stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+		<!-- Animate stylesheet -->
+		<link rel="stylesheet" href="/comp/animate/dist/css/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous">
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0a0a0a">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0a0a0a">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Popup notifier stylesheet -->
+		<link href="/app/dist/css/popups.min.css" rel="stylesheet">
+		<!-- Multi level context menu stylesheet -->
+		<link href="/app/dist/css/dropdown.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+		<!-- Tooltip design based on system fonts -->
+		<link href="/app/dist/css/system-fonts.min.css" rel="stylesheet">
+		<link href="/app/dist/css/tooltips.min.css" rel="stylesheet">
+		<!-- Bootstrap-table design stylesheet -->
+		<link href="/app/dist/css/table-borderless.min.css" rel="stylesheet">
+
+	</head>
+
+	<body role="document">
+
+		<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+		<!--div class="container" role="main" id="main-container"-->
+			<a name="Bootstrap-Table"></a>
+			<div id="row-nowplaying" class="row">
+				<div id="col-coverart" class="col-md-5">
+					<div id="div-coverart" class="thumbnail clearfix">
+						<!--a href=[[NOW_PLAYING_COVER_PREVIEW_xx]] data-lightbox="nowplaying-1" data-title=[[NOW_PLAYING_DATA_TITLE_xx]]><img style="width: 400px; height: 100%; border-radius: 5px !important;" id="img-coverart" src=[[NOW_PLAYING_COVER_ART_xx]] alt="Ajaxed cover art loader." title="Click to enlarge cover art"></a-->
+						<a href=[[NOW_PLAYING_COVER_PREVIEW]] data-lightbox="nowplaying-1" data-title=[[NOW_PLAYING_DATA_TITLE]]><img style="width: 400px; height: 100%;" id="img-coverart" src=[[NOW_PLAYING_COVER_ART]] alt="Ajaxed cover art loader." title="Click to enlarge cover art"></a>
+					</div>
+				</div>
+				<div id="col-nowplaying" class="col-md-7">
+					<div id="pnl-nowplaying" class="panel panel-default">
+						<div id="nowplaying-header-info" class="panel-heading panel-heading-custom">
+							<table id="nowplaying-heading-tag" style="display: table; width: 100%;" artist="[[NOW_PLAYING_SEARCH_ARTIST]]">
+								<tbody>
+									<tr>
+										<td valign="top">
+											<h2 class="headermargins"><strong>[[NOW_PLAYING_ARTIST]]</strong></h2>
+										</td>
+										<td width="85px" valign="top"><h2 class="headermargins">
+											<a class="info-icon" onclick="onHeaderArtistClick();" title="Click to show albums for artist." href="javascript:void(0);">
+												<span class="glyphicon glyphicon-cd info-glyphicon-default"></span>
+											</a>
+											<a class="info-icon-right" onclick="onHeaderInfoClick();" title="Click to search for artist information." href="javascript:void(0);">
+												<span class="glyphicon glyphicon-info-sign info-glyphicon-default"></span>
+											</a>
+										</h2></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="pnl-nowplaying-body" class="panel-body">
+							<div id="nowplaying-track-info">
+								<h2 class="titlemargins">[[NOW_PLAYING_TITLE]]</h2>
+								<div class="spacer4"></div>
+								<table style="display: table; width: 100%;">
+									<tbody>
+										<tr>
+											<td valign="top">
+												<h3 class="tablemargins">[[NOW_PLAYING_ALBUM]]</h3>
+											</td>
+											<td valign="top"><h3 class="tablemargins">
+												<span class="pull-right">&nbsp;([[NOW_PLAYING_DATE]])</span>
+											</h3></td>
+										</tr>
+									</tbody>
+								</table>
+								<h4>Track&nbsp;[[NOW_PLAYING_TRACK]]&nbsp;<img style="height: 32px; border: 0 none; box-shadow: none; float:right; padding-top: 0px;" id="img-media" class="img-thumbnail" src="/rest/icons/[[NOW_PLAYING_ICON]].jpg" alt="media"></h4>
+								<h4>[[NOW_PLAYING_CODEC]] - [[NOW_PLAYING_FORMAT]] - [[NOW_PLAYING_SAMPLES]]</h4>
+							</div>
+							<div class="spacer4"></div>
+							<div id="nowplaying-time-info" class="text-center">
+								<h5>
+									<span class="label label-default pull-left">0:00</span>
+									<span class="label label-default [[PLAYER_STATUS_COLOR]]">[[PLAYER_STATUS_CAPTION]]</span>
+									<span class="label label-default pull-right">[[NOW_PLAYING_DURATION]]</span>
+								</h5>
+							</div>
+							<div id="nowplaying-progress" onclick="onProgressClick(event)" class="progress">
+								<div id="pgsNowplaying" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:[[NOW_PLAYING_PROGRESS]]%;">[[NOW_PLAYING_TIME]]</div>
+							</div>
+							<div id="nowplaying-buttons" class="text-center">
+								<div class="btn-group pull-left" role="group">
+									<button id="btnPrevSong" name="Prev" value="PREV" addClick="true" class="btn btn-responsive-lg btn-default btn-player" disabled="true">
+										<span class="glyphicon glyphicon-step-backward" style="pointer-events:none;" aria-hidden="true"></span> 
+									</button>
+									<button id="btnFastReverse" name="FR" value="FR" addClick="true" class="btn btn-responsive-lg btn-default">
+										<span class="glyphicon glyphicon-fast-backward" style="pointer-events:none;" aria-hidden="true"></span> 
+									</button>
+								</div>
+								<div class="btn-group" role="group">
+									<button id="btnPlay" name="Play" value="PLAY" addClick="true" class="btn btn-responsive-lg btn-default btn-player" disabled="true">
+										<span class="glyphicon glyphicon-play" style="pointer-events:none;" aria-hidden="true"></span> 
+									</button>
+									<button id="btnPause" name="Pause" value="PAUSE" addClick="true" class="btn btn-responsive-lg btn-default">
+										<span class="glyphicon glyphicon-pause" style="pointer-events:none;" aria-hidden="true"></span> 
+									</button>
+									<button id="btnStop" name="Stop" value="STOP" addClick="true" class="btn btn-responsive-lg btn-default">
+										<span class="glyphicon glyphicon-stop" style="pointer-events:none;" aria-hidden="true"></span> 
+									</button>
+								</div>
+								<div class="btn-group  pull-right" role="group">
+									<button id="btnFastForward" name="FF" value="FF" addClick="true" class="btn btn-responsive-lg btn-default">
+										<span class="glyphicon glyphicon-fast-forward" style="pointer-events:none;" aria-hidden="true"></span> 
+									</button>
+									<button id="btnNextSong" name="Next" value="NEXT" addClick="true" class="btn btn-responsive-lg btn-default btn-player" disabled="true">
+										<span class="glyphicon glyphicon-step-forward" style="pointer-events:none;" aria-hidden="true"></span> 
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="spacer6"></div>
+			<a name="Bootstrap-Table-Playlist"></a>
+			<table 
+				id="data-table"
+				data-locale="en-DB"
+				data-toggle="table"
+				data-url="/rest/nowplaying.json"
+				data-cache="false"
+				data-single-select="true"
+				data-loading-font-size="18px"
+				data-loading-template="tableLoadingMessage"
+				data-select-item-name="playlist-select-event"
+				data-click-to-select="true"
+				data-side-pagination="server"
+				data-silent-sort="true"
+				data-row-style="activeItemSelector"
+				data-classes="table table-hover table-bordered table-inner-borderless table-striped">
+				<thead>
+					<tr>
+						<th data-field="image" data-width=40 data-show-header=false data-formatter="thumbNailLoader">Cover</th>
+						<th data-field="Track">Track</th>
+						<th data-field="Displayartist">Artist</th>
+						<th data-field="Album">Album</th>
+						<th data-field="Displaytitle">Title</th>
+						<th data-field="Time" data-width=65 data-formatter="timeStampLoader">Time</th>
+					</tr>
+				</thead>
+			</table>
+			<div style="margin:0;padding:0;height:24px;"></div>
+			<div class="panel panel-default">
+				<div id="now-playing-repeat" class="panel-body text-center">
+					<button value="PREV" onclick="onButtonClick(event)" class="btn btn-responsive-lg btn-default visible-xxs pull-left btn-player" disabled="true">
+						<span class="glyphicon glyphicon-step-backward" style="pointer-events:none;" aria-hidden="true"></span> 
+					</button>
+					<div class="btn-group hidden-xxs pull-left" role="group">
+						<button value="PREV" onclick="onButtonClick(event)" class="btn btn-responsive-lg btn-default btn-player" disabled="true">
+							<span class="glyphicon glyphicon-step-backward" style="pointer-events:none;" aria-hidden="true"></span> 
+						</button>
+						<button value="FR" onclick="onButtonClick(event)" class="btn btn-responsive-lg btn-default">
+							<span class="glyphicon glyphicon-fast-backward" style="pointer-events:none;" aria-hidden="true"></span> 
+						</button>
+					</div>
+					<div class="btn-group" role="group">
+						[[BTN_DIRECT_MODE]]
+						[[BTN_HALT_MODE]]
+					</div>
+					<div class="btn-group" role="group">
+						[[BTN_RANDOM_MODE]]
+						[[BTN_REPAT_MODE]]
+						[[BTN_SINGLE_MODE]]
+						[[BTN_DISK_MODE]]
+					</div>
+					[[BTN_SHUFFLE_SONG]]
+					<div class="btn-group hidden-xxs pull-right" role="group">
+						<button value="FF" onclick="onButtonClick(event)" class="btn btn-responsive-lg btn-default">
+							<span class="glyphicon glyphicon-fast-forward" style="pointer-events:none;" aria-hidden="true"></span> 
+						</button>
+						<button value="NEXT" onclick="onButtonClick(event)" class="btn btn-responsive-lg btn-default btn-player" disabled="true">
+							<span class="glyphicon glyphicon-step-forward" style="pointer-events:none;" aria-hidden="true"></span> 
+						</button>
+					</div>
+					<button value="NEXT" onclick="onButtonClick(event)" class="btn btn-responsive-lg btn-default visible-xxs pull-right btn-player" disabled="true">
+						<span class="glyphicon glyphicon-step-forward" style="pointer-events:none;" aria-hidden="true"></span> 
+					</button>
+				</div>
+			</div>
+			<div id="mode-properties"></div>
+
+			<!-- Player context menu -->
+			[[PLAYER_CONTEXT_MENU]]
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		=============================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.js" integrity="sha384-nNFbqpWdNhhdPeDVkanWjEBNKejyGGlTKQDMEAEGus5cDGzZLbh5rWo43RhMxjHX" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/custom/dist/locale/bootstrap-table-en-DB.min.js" integrity="sha384-6LexGeswqYRhAh9Pkzv86kHNYvxjfkyver3ZOtZbtMpJ9F078H/bNGWJRYE7XtCU" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table-contextmenu/dist/js/bootstrap-table-contextmenu.min.js" integrity="sha384-Wj+2wn05iKn1cAazUr7gGA1c8GjfCjm5/IqZO0UP3eofFbWVzL2FhI9CAo6bZ76T" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-notify/dist/js/bootstrap-notify.min.js" integrity="sha384-sxybKa1ELG0raSRSE/bO9tjQ4n7Iul+trHWbR4Afwm1hFpzj6hsa4HZ7v1c4eqp4" crossorigin="anonymous"></script>
+		<script src="/comp/lightbox/dist/js/lightbox.min.js" integrity="sha384-HL3iKOzgwMWtoC3oS2MJbiadfVcDTx1PgByyybhHrQHUmVIeJvE9Up8BDxQ9uFPg" crossorigin="anonymous"></script>
+	    <script src="/comp/websocket/dist/js/websocket.min.js"></script>
+
+		<!-- Place own JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/wikipedia.min.js"></script>
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/playlistmanager.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/popups.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script src="/app/dist/js/tooltips.min.js"></script>
+		<script src="/app/dist/js/contextmenu.min.js"></script>
+		<script src="/app/dist/js/nowplaying.min.js"></script>
+		<script>
+
+			function thumbNailLoader(value, row, index) {
+				var ext = row.Active ? "png" : "jpg";
+				return '<img addHover="true" path="' + row.URL + '" src="/rest/thumbnails/' + row.Albumhash + '-32.' + ext + '?file=' + row.Filehash + '&' + createUniqueUriParam() + '">';
+			}
+			function timeStampLoader(value, row, index) {
+				var html = row.Time;
+				if (row.Active) {
+					html = row.Time + '<br><img id="img-progress" style="display:block; margin:0; margin-top:2px; border:none; box-shadow:none;" time="' + row.Time + '" src="/rest/progress.png?' + 'size=' + row.Time.length.toString() + '&' + createUniqueUriParam() + '">';
+				}
+				return html;
+			}
+			function activeItemSelector(row, index) {
+				if (row.Active) {			
+					return {
+						classes: 'selected-row'
+					};
+				}
+				return {};
+			}
+			function tableLoadingMessage(loadingMessage) {
+			  return '<span class="loading-wrap">' +
+				'<span class="loading-text">' +
+				'Loading songs, please wait ' +
+				'</span>' +
+				'<span class="glyphicon glyphicon-refresh normal-right-spinner">' +
+				'</span>'
+			}
+
+			// Get update trigger via websocket
+			var connected = false;
+			var socket = getSocketUrl();
+		   	console.log('[nowplaying.html] Websocket = <' + socket + '>');
+		    var webSocket = $.simpleWebSocket({
+				url: socket, 
+				onconnect: onWebSocketConneted,
+				onmessage: onWebSocketMessage, 
+				ondisconnect: onWebSocketDisconnected,
+				useWebSocketsOnMobileDevices: false
+			});
+
+			function onWebSocketMessage (message) {
+				if (!!message.location && !!message.action) {
+					if (message.location === "player" && message.action === "update") {
+						statusGroupRefresh();
+				   		console.log('[nowplaying.html] Websocket received <' + message.location + ':' + message.action + '>');
+					}
+				}
+				connected = true;
+		    }
+			function onWebSocketConneted() {
+				console.log('[nowplaying.html] Websocket connected.');
+				connected = true;
+			}
+			function onWebSocketDisconnected() {
+				console.log('[nowplaying.html] Websocket disconnected.');
+				connected = false;
+			}
+
+			// Refresh by timer fallback
+			function doRefreshTimerAction() {
+				if (!connected || !webSocket.isConnected()) {
+					connected = false;
+					statusGroupRefresh();
+				}
+			}
+
+			// Set popup menus before assigning other event handlers!		
+			// setTablePopupMenu(); --> see (1) below!
+			var direct = getDirectMode();
+			initTablePopupMenu(!direct);
+
+			// Set mouse events
+			setTableEvents();
+			setImageEvents();
+			setButtonEvents();
+
+			// Set active main menu item
+			$(document).ready(function () {
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-player');
+				setMainMenuSwipeEvents();
+
+				// Set multi level context menues for mobile devices
+				setMultiLevelContextMenu();
+
+				// Set Lightbox2 image preview options		
+				lightbox.option({
+					'fitImagesInViewport': true,
+					'positionFromTop': 62
+				})
+
+				// Activate Bootsprap tooltips
+				activateBootstrapTooltips();
+
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+
+				// Update status displays
+				statusGroupRefresh();
+				getNowPlayingButtons();
+
+				// Get direct play mode (1)
+				// getRepeatButtons();
+
+				// Do cyclic refresh		
+				var webRefreshTimeout = [[WEB_REFRESH_TIMER]];
+				setInterval('doRefreshTimerAction()', webRefreshTimeout);
+			});
+
+		</script>
+	</body>
+</html>

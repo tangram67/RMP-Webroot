@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Reference Music Player DSD FLAC WAV AIFF MP3 MP4 db Application">
+		<meta name="keywords" content="Reference,Media,Player,DSD,FLAC,WAV,AIFF,MP3,MP4,Music,Entertainment">
+		<meta name="copyright" content="Dirk Brinkmeier db Application">
+		<meta name="author" content="Dirk Brinkmeier db Application">
+		<meta name="google" content="notranslate">
+
+		<title>RMP Internet Radio</title>
+		<link rel="icon" href="/favicon.ico">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+		<!-- Normalizer (cross browser) stylesheet -->
+		<link rel="stylesheet" href="/app/dist/css/normalize.min.css" integrity="sha384-VmMqkRP5QxUTFTuwFH4svmhLrcXsqWBQKfbzAUTHZPK5EvX+GMF5qSX2C2hUtEZM" crossorigin="anonymous">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/comp/bootstrap/3.4.1/assets/css/ie10-viewport-bug-workaround.css" integrity="sha384-zCG85JND54HZlOj7juxUGcKAcGNauYMK7i9oIwSaXCaDlqAfcx7jG1B92vNpomOi" crossorigin="anonymous">
+		<!-- Bootstrap theme -->
+		<!--link rel="stylesheet" href="/comp/bootstrap/3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"-->
+
+		<!-- Bootstrap table stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.css" integrity="sha384-4k6aQN6RIQ6JYbvXXejqBZqRCA/nPGUExuhwH377tIB9b6FcP/ii0TnuSsiLsiwk" crossorigin="anonymous">
+		<!-- Reorder row stylesheet for bootstrap table -->
+		<link rel="stylesheet" href="/comp/bootstrap-table/1.17.1/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.min.css" integrity="sha384-10M1Sb5TezE2MNJhH2I+vCxyjVusXdqlrbRNeWgajfl6sTykUbC9BgzlCdyAidTq" crossorigin="anonymous">
+
+		<!-- Bootstrap combobox stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-combobox/dist/css/bootstrap-combobox.min.css" integrity="sha384-BXU6+CR+NY54VZOiF9RDLVIEUOW+N87VWw+IJUMr1eLH3VZXifq1L+Utqa+67qKQ" crossorigin="anonymous">
+		<!-- Bootstrap checkbox stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-checkbox/dist/css/bootstrap-checkbox.min.css" integrity="sha384-keWaQZhU6T+ey9H9OG5ejoaufKMPMswnx//959QHA50I4FRny4VbJ66OvDJe5vUt" crossorigin="anonymous">
+		<!-- Bootstrap radiobutton stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-radiobutton/dist/css/bootstrap-radiobutton.min.css">
+		<!-- Animate stylesheet -->
+		<link rel="stylesheet" href="/comp/animate/dist/css/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous">
+		<!-- Spinner stylesheet -->
+		<link rel="stylesheet" href="/comp/bootstrap-spinner/dist/css/spinner.min.css" integrity="sha384-fpNIUS4ZxHO+CmiEO9y22yB+FRm7Uc5OZVTCRwNHXTpoNmS3K4Y9G7OjbMZ1Di6W" crossorigin="anonymous">
+
+		<!-- Apple web application icons -->
+		<link rel="apple-touch-icon" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="36x36" href="/images/logo36.png">
+		<link rel="apple-touch-icon" sizes="48x48" href="/images/logo48.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo72.png">
+		<link rel="apple-touch-icon" sizes="96x96" href="/images/logo96.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo144.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo192.png">
+
+		<!-- Apple web application settings -->
+		<link rel="apple-touch-startup-image" href="/images/logo192.png">
+		<meta name="apple-mobile-web-app-title" content="Reference Music Player Control Interface">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0a0a0a">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0a0a0a">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
+
+		<!-- Callout format stylesheet -->
+		<link href="/app/dist/css/callout.min.css" rel="stylesheet">
+		<!-- Popup notifier stylesheet -->
+		<link href="/app/dist/css/popups.min.css" rel="stylesheet">
+		<!-- Popup table drag and drop design stylesheet -->
+		<link href="/app/dist/css/table-drag-and-drop.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/app/dist/css/theme.min.css" rel="stylesheet">
+
+		<!-- Overwrite Bootstrap 3.x.x styles with "Modern UI" design -->
+		<link rel="stylesheet" href="/comp/bootstrap-flat/dist/css/bootstrap-flat.min.css" integrity="sha384-yO4TisELjypETHKc96LJ/UVXAbY0WU3qQDo5+GKzmntXSHI4TW3oh+esNtT4IT+Q" crossorigin="anonymous">
+		<!-- Outlined "Modern UI" stylesheet -->
+		<link href="/app/dist/css/modern.min.css" rel="stylesheet">
+		<!-- Bootstrap-table custom design stylesheet -->
+		<link href="/app/dist/css/table-borderless.min.css" rel="stylesheet">
+	</head>
+
+  	<body role="document">
+    	<!-- Fixed navbar -->
+		<div id="main-menu-container">
+			[[NAVBAR_MAIN_MENU]]
+		</div> <!-- main-menu-container -->
+
+		<div class="container theme-showcase" role="main" id="main-container">
+			<div id="stations-header" class="page-header">
+				<table style="display: table; width: 100%;">
+					<tbody>
+						<tr>
+							<td id="streaming-page-header" valign="top">
+								<h1 class="pageheadermargins">[[STATIONS_HEADER]]</h1>
+							</td>
+							<td width="75px" valign="top"><h1 class="pageheadermargins">
+								<a id="btnExportStations" href="[[STATIONS_EXPORT_URL]]" download="[[STATIONS_EXPORT_NAME]]" title="Export radio stations as M3U file..." class="info-icon" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-music info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+								<a id="idShowHelp" name="SHOWHELP" value="SHOWHELP" onclick="onAnchorClick(this, 1000);" title="Show internet stream help screen" class="info-icon-right" href="javascript:void(0);">
+									<span class="glyphicon glyphicon-question-sign info-glyphicon-small" aria-hidden="true"></span>
+								</a>
+
+							</h1></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="spacer4"></div>
+
+			<div class="well well-sm" style="margin-bottom: 15px;" id="streaming-radio-text">
+				[[STREAM_RADIO_TEXT]]
+			</div>
+
+			<div id="stations-table-toolbar" class="btn-group" role="group" aria-label="Internet stream actions">
+				<div class="btn-group" role="group" aria-label="Internet stream actions">
+					<a id="btnPlay" name="Play" value="PLAYSTREAM" class="btn btn-default" role="button" aria-disabled="true" onclick="onButtonClick(event);" title="Play last stream">
+						<span class="glyphicon glyphicon-play" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+					<a id="btnStop" name="Stop" value="STOPSTREAM" class="btn btn-default" role="button" aria-disabled="true" onclick="onButtonClick(event);" title="Stop streaming">
+						<span class="glyphicon glyphicon-stop" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+				</div>
+				<div class="span4 pull-left">
+					<p>&nbsp;</p>
+				</div>
+				<div class="btn-group" role="group" aria-label="Internet stream actions">
+					<a id="btnAdd" name="Pause" value="CREATESTREAM" class="btn btn-default" role="button" aria-disabled="true" onclick="onButtonClick(event);" title="Add new station">
+						<span class="glyphicon glyphicon-plus" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+					<a id="btnRevert" name="Revert" value="REVERTSTREAM" class="btn btn-default" role="button" aria-disabled="true" onclick="onButtonClick(event);" title="Revert last changes">
+						<span class="glyphicon glyphicon-arrow-left" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+					<a id="btnToggle" name="Toggle" value="TOGGLEMODE" class="btn btn-default" role="button" aria-disabled="true" onclick="onButtonClick(event);" title="Reorder rows via Drag'n'Drop">
+						<span class="glyphicon glyphicon-option-horizontal" style="pointer-events:none;" aria-hidden="true"></span>
+					</a>
+				</div>
+			</div>
+
+			<table 
+				id="data-table"
+				data-toggle="table"
+				data-url="/rest/stations.json"
+				data-cache="false"
+				data-page-size="[[TABLE_ROW_COUNT]]"
+				data-page-list="[10, 25, 50, 100, All]"
+				data-show-columns="true"
+				data-show-refresh="true"
+				data-show-toggle="true"
+				data-single-select="true"
+				data-loading-font-size="18px"
+				data-loading-template="tableLoadingMessage"
+				data-show-search-clear-button="true"
+				data-select-item-name="playlist-select-event"
+				data-click-to-select="true"
+				data-side-pagination="server"
+				data-pagination="false"
+				data-id-field="id"
+				data-search="true"
+				data-search-align="right"
+				data-toolbar="#stations-table-toolbar"
+				data-show-footer="false"
+				data-reorderable-rows="false"
+				data-use-row-attr-func="false"
+				data-row-style="activeItemSelector"
+				data-classes="table table-hover table-bordered table-inner-borderless table-striped">
+				<thead>
+					<tr>
+						<th data-field="image" data-show-header="false" data-width="40" data-formatter="thumbNailLoader">Icon</th>
+						<th data-field="Name">Station</th>
+						<th data-field="URL">URL</th>
+						<th data-formatter="tableActionLoader" data-width="135" data-class="text-center">Actions</th>
+					</tr>
+				</thead>
+			</table>
+
+			<!-- Playlist context menu -->
+			[[STATIONS_CONTEXT_MENU]]
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		=============================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/comp/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table-dnd/dist/jquery.tablednd.min.js" integrity="sha384-Z0YQ2a7R0AnPGKZxQ4W+QRXKitdYmSOnBvUYh97BRSpYRVnH2ZaOxn9/OhbRePIm" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap/3.4.1/assets/js/ie10-viewport-bug-workaround.js" integrity="sha384-Y/KNhcDQLQRwTDdfrC7I3v4nDqBrNVlCe4M5xd8Wp2HJachg6ZBdP7SKBJ509sOa" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/1.17.1/dist/bootstrap-table.min.js" integrity="sha384-nNFbqpWdNhhdPeDVkanWjEBNKejyGGlTKQDMEAEGus5cDGzZLbh5rWo43RhMxjHX" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table/1.17.1/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" integrity="sha384-QIhrFQzKP/pvePoKIB872PNCusa/u7BzZUsUOQ4IFwlhNzYFxCqy74yb7OMAh9Tn" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-table-contextmenu/dist/js/bootstrap-table-contextmenu.min.js" integrity="sha384-Wj+2wn05iKn1cAazUr7gGA1c8GjfCjm5/IqZO0UP3eofFbWVzL2FhI9CAo6bZ76T" crossorigin="anonymous"></script>
+		<script src="/comp/bootstrap-notify/dist/js/bootstrap-notify.min.js" integrity="sha384-sxybKa1ELG0raSRSE/bO9tjQ4n7Iul+trHWbR4Afwm1hFpzj6hsa4HZ7v1c4eqp4" crossorigin="anonymous"></script>
+	    <script src="/comp/websocket/dist/js/websocket.min.js"></script>
+
+		<!-- Place own JavaScripts here (jQuery loaded before!)
+		=============================================================== -->
+		<script src="/app/dist/js/functions.min.js"></script>
+		<script src="/app/dist/js/messagedialog.min.js"></script>
+		<script src="/app/dist/js/playlistmanager.min.js"></script>
+		<script src="/app/dist/js/mainmenu.min.js"></script>
+		<script src="/app/dist/js/tableview.min.js"></script>
+		<script src="/app/dist/js/popups.min.js"></script>
+		<script src="/app/dist/js/swipe.min.js"></script>
+		<script src="/app/dist/js/contextmenu.min.js"></script>
+		<script src="/app/dist/js/stationdialog.min.js"></script>
+		<script src="/app/dist/js/stationmanager.min.js"></script>
+		<script src="/app/dist/js/streaming.min.js"></script>
+		<script>
+
+			function thumbNailLoader(value, row, index) {
+				var ext = row.Active ? "png" : "jpg";
+				var hash = '00000000000000000000000000000001';
+				var file = hash + '-32.' + ext;
+				return '<img addHover="true" src="/rest/thumbnails/' + file + '?file=' + hash + '&' + createUniqueUriParam() + '">';
+			}
+			function activeItemSelector(row, index) {
+				if (row.Active) {			
+					return {
+						classes: 'selected-row'
+					};
+				}
+				return {};
+			}
+			function tableActionLoader(value, row, index) {
+				if (row.Active) {
+					return [
+						"<div oncontextmenu=\"return false;\" class=\"btn-group\" role=\"group\">",
+						" <button value=\"STOPSTREAM\" tvname=\"" + row.Originalname + "\" hash=\"" + row.Hash + "\" id=\"" + row.id + "\" onclick=\"onActionButtonClick(event);\" oncontextmenu=\"return false;\" class=\"btn btn-responsive-md btn-default\" data-toggle=\"tooltip\" title=\"Stop &quot;" + row.Originalname + "&quot;\">",
+						"  <span class=\"glyphicon glyphicon-stop\" style=\"pointer-events:none;\" aria-hidden=\"true\"></span>",
+						" </button>",
+						" <button value=\"EDITSTREAM\" tvname=\"" + row.Originalname + "\" hash=\"" + row.Hash + "\" id=\"" + row.id + "\" onclick=\"onActionButtonClick(event);\" oncontextmenu=\"return false;\" class=\"btn btn-responsive-md btn-default\" disabled=\"true\" data-toggle=\"tooltip\" title=\"Edit &quot;" + row.Originalname + "&quot;\">",
+						"  <span class=\"glyphicon glyphicon-pencil\" style=\"pointer-events:none;\" aria-hidden=\"true\"></span>",
+						" </button>",
+						" <button value=\"DELETESTREAM\" tvname=\"" + row.Originalname + "\" hash=\"" + row.Hash + "\" id=\"" + row.id + "\" onclick=\"onActionButtonClick(event);\" oncontextmenu=\"return false;\" class=\"btn btn-responsive-md btn-default\" disabled=\"true\" data-toggle=\"tooltip\" title=\"Delete &quot;" + row.Originalname + "&quot;\">",
+						"  <span class=\"glyphicon glyphicon-trash\" style=\"pointer-events:none;\" aria-hidden=\"true\"></span>",
+						" </button>",
+						"</div>"
+					].join('');
+				} else {
+					return [
+						"<div oncontextmenu=\"return false;\" class=\"btn-group\" role=\"group\">",
+						" <button value=\"PLAYSTREAM\" tvname=\"" + row.Originalname + "\" hash=\"" + row.Hash + "\" id=\"" + row.id + "\" onclick=\"onActionButtonClick(event);\" oncontextmenu=\"return false;\" class=\"btn btn-responsive-md btn-default\" data-toggle=\"tooltip\" title=\"Play &quot;" + row.Originalname + "&quot;\">",
+						"  <span class=\"glyphicon glyphicon-play\" style=\"pointer-events:none;\" aria-hidden=\"true\"></span>",
+						" </button>",
+						" <button value=\"EDITSTREAM\" tvname=\"" + row.Originalname + "\" hash=\"" + row.Hash + "\" id=\"" + row.id + "\" onclick=\"onActionButtonClick(event);\" oncontextmenu=\"return false;\" class=\"btn btn-responsive-md btn-default\" data-toggle=\"tooltip\" title=\"Edit &quot;" + row.Originalname + "&quot;\">",
+						"  <span class=\"glyphicon glyphicon-pencil\" style=\"pointer-events:none;\" aria-hidden=\"true\"></span>",
+						" </button>",
+						" <button value=\"DELETESTREAM\" tvname=\"" + row.Originalname + "\" hash=\"" + row.Hash + "\" id=\"" + row.id + "\" onclick=\"onActionButtonClick(event);\" oncontextmenu=\"return false;\" class=\"btn btn-responsive-md btn-default\" data-toggle=\"tooltip\" title=\"Delete &quot;" + row.Originalname + "&quot;\">",
+						"  <span class=\"glyphicon glyphicon-trash\" style=\"pointer-events:none;\" aria-hidden=\"true\"></span>",
+						" </button>",
+						"</div>"
+					].join('');
+				}
+			}			
+			function tableLoadingMessageDefault(loadingMessage) {
+			  return '<span class="loading-wrap">' +
+				'<span class="loading-text">' +
+				'Loading stations, please wait ' +
+				'</span>' +
+				'<span class="animation-wrap"><span class="animation-dot"></span></span>' +
+				'</span>'
+			}
+			function tableLoadingMessage(loadingMessage) {
+			  return '<span class="loading-wrap">' +
+				'<span class="loading-text">' +
+				'Loading stations, please wait ' +
+				'</span>' +
+				'<span class="glyphicon glyphicon-refresh normal-right-spinner">' +
+				'</span>'
+			}
+
+			// Get update trigger via websocket
+			var connected = false;
+			var socket = getSocketUrl();
+		   	console.log('[streaming.html] Websocket = <' + socket + '>');
+		    var webSocket = $.simpleWebSocket({ url: socket, onconnect: onWebSocketConneted, onmessage: onWebSocketMessage, ondisconnect: onWebSocketDisconnected });
+
+			function onWebSocketMessage (message) {
+				if (!!message.location && !!message.action) {
+					if (message.location === "stream" && message.action === "update") {
+						statusGroupRefresh();
+				   		console.log('[streaming.html] Websocket received <' + message.location + ':' + message.action + '>');
+					}
+				}
+				connected = true;
+		    }
+			function onWebSocketConneted() {
+				console.log('[streaming.html] Websocket connected.');
+				connected = true;
+			}
+			function onWebSocketDisconnected() {
+				console.log('[streaming.html] Websocket disconnected.');
+				connected = false;
+			}
+
+			// Refresh by timer fallback
+			function doRefreshTimerAction() {
+				if (!connected || !webSocket.isConnected()) {
+					connected = false;
+					statusGroupRefresh();
+				}
+			}
+
+			// Set popup menus before assigning other event handlers!		
+			setTablePopupMenu();
+
+			// Set mouse events
+			setTableEvents();
+			setNavigationEvents();
+
+			// Page loaded
+			$(document).ready(function () {
+
+				// Set event handler		
+				setButtonEvents();
+
+				// Set active main menu item
+				setActiveMenuItem('#mn-media');
+				setMainMenuSwipeEvents();
+				
+				// Do Apple iOS tweaks for href links
+				redirectApplicationLinks();
+
+				// Update status displays
+				statusGroupRefresh();
+				getStreamUpdate();
+
+				// Do cyclic refresh		
+				var webRefreshTimeout = [[WEB_REFRESH_TIMER]];
+				setInterval('doRefreshTimerAction()', webRefreshTimeout); 
+			});
+	
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+/* 
+    Modify bootstrap-table design 
+    having no inner vertical lines
+*/
+.table-inner-borderless > tbody > tr > td,
+.table-inner-borderless > tbody > tr > th {
+	border-right: 0 !important;
+	border-left: 0 !important;
+}
+
+.table-inner-borderless > tfoot > tr > td,
+.table-inner-borderless > tfoot > tr > th {
+	border-right: 0 !important;
+	border-left: 0 !important;
+}
+
+.table-inner-borderless > thead > tr > td,
+.table-inner-borderless > thead > tr > th {
+	border-right: 0 !important;
+	border-left: 0 !important;
+}
+
