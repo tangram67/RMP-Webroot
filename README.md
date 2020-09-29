@@ -1,5 +1,7 @@
 # RMP-Webroot
 
+![alt text](https://github.com/tangram67/RMP-Webroot/blob/master/rmp-website.png?raw=true)
+
 Webroot for the **Reference Media Player**, or in short **RMP**
 
 This repository is meant to use with the **Reference Music Player** project on https://github.com/tangram67/RMP
