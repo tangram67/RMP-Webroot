@@ -285,6 +285,40 @@ function setCheckBoxValue(element, value) {
 	}
 };
 
+
+function updateScannerState() {
+	$.ajax({
+		type: "GET",
+		url: "/rest/scanner.json",
+		data: "OnScannerState=null&prepare=yes&title=scanner",
+		dataType: "json",
+		success: function (data) {
+			console.log(data);
+
+			// Read flags from JSON data			
+			var active = data['Scanning'] || false;
+			var transition = data['Transition'] || false;
+			var mode = data['Mode'] || 0;
+
+			// Update status label
+			if (active || transition) {
+				statusLabelRefresh();
+			}
+
+			// Set button display mode
+			if (transition) {
+				setScannerButtons(active, mode);
+			}
+		},
+		error: function() {
+			console.log('Error: AJAX getScannerState() failed.');
+			setScannerButtons(false, 0);
+			statusLabelRefresh();
+		},
+	});
+};
+
+
 function getPlayerConfig() {
 	$.ajax({
 		type: "GET",
@@ -594,12 +628,10 @@ function onButtonClick(event) {
 
 		// Application action buttons
 		if (target.id === "btnRescan") {
-			$("#btnRescan").prop('disabled', true);
-			$("#spnRescan").addClass('normal-right-spinner');
+			setScannerButtons(true, 1);
 		}
 		if (target.id === "btnRebuild") {
-			$("#btnRebuild").prop('disabled', true);
-			$("#spnRebuild").addClass('normal-right-spinner');
+			setScannerButtons(true, 2);
 		}
 		if (target.id === "btnClear") {
 			$("#btnClear").prop('disabled', true);
@@ -672,9 +704,7 @@ function onButtonClicked() {
 	if (!ok) {
 		var button = $("#btnRescan")	
 		if (button.prop('disabled')) {
-			button.prop('disabled', false);
-			$("#spnRescan").removeClass('normal-right-spinner');
-			statusLabelRefresh();
+			updateScannerState();
 			action = "Rescan music library";
 			ok = true;
 		}
@@ -682,9 +712,7 @@ function onButtonClicked() {
 	if (!ok) {
 		button = $("#btnRebuild")
 		if (button.prop('disabled')) {
-			button.prop('disabled', false);
-			$("#spnRebuild").removeClass('normal-right-spinner');
-			statusLabelRefresh();
+			updateScannerState();
 			action = "Rebuild music library";
 			ok = true;
 		}
@@ -693,7 +721,7 @@ function onButtonClicked() {
 		button = $("#btnClear")
 		if (button.prop('disabled')) {
 			button.prop('disabled', false);
-			statusLabelRefresh();
+			updateScannerState();
 			action = "Clear music library";
 			ok = true;
 		}
@@ -768,6 +796,31 @@ function onButtonClicked() {
 		console.log('[system.js] Async click on button, no valid action found!');
 	}
 };
+
+
+function setScannerButtons(scanning, mode) {
+	var button1 = $("#btnRescan")
+	var button2 = $("#btnRebuild")
+	var spn1 = $("#spnRescan")
+	var spn2 = $("#spnRebuild")
+	if (scanning) {
+		button1.prop('disabled', true);
+		button2.prop('disabled', true);
+		switch (mode) {
+			case 1:
+				spn1.addClass('normal-right-spinner');
+				break;
+			case 1:
+				spn2.addClass('normal-right-spinner');
+				break;
+		}
+	} else {
+		button1.prop('disabled', false);
+		button2.prop('disabled', false);
+		spn1.removeClass('normal-right-spinner');
+		spn2.removeClass('normal-right-spinner');
+	}
+}
 
 function setButtonEvents() {
 	var buttons = document.getElementsByTagName('button');
