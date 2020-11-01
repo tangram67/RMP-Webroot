@@ -810,7 +810,7 @@ function setScannerButtons(scanning, mode) {
 			case 1:
 				spn1.addClass('normal-right-spinner');
 				break;
-			case 1:
+			case 2:
 				spn2.addClass('normal-right-spinner');
 				break;
 		}
