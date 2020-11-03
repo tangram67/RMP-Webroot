@@ -75,7 +75,7 @@ function setActiveMenuItem(item) {
 };
 
 function onMainLogoClick() {
-	window.location = '/app/main/dashboard.html';
+	window.location = '/app/playlist/nowplaying.html';
 };
 
 function onAboutClick() {
