@@ -704,19 +704,44 @@ function onContextArtistAction(action, row) {
 function onProgressClick(event) {
 	var elem = document.getElementById('nowplaying-progress');
 	console.log('Called onProgressClick() PageX = ' + event.pageX + ' OffsetX = ' + event.offsetX + ' Left = ' + elem.offsetLeft + ' Width = ' + elem.offsetWidth);
-	var progress = event.offsetX * 100 / elem.offsetWidth;
-	console.log('Called onProgressClick() Progress = ' + progress + ' %');
-	sendProgressClick(progress);
+	var progress = event.offsetX * 100.0 / elem.offsetWidth;
+	if (progress > 0.0 && progress < 100.0) {
+		console.log('Called onProgressClick() Progress = ' + progress + ' %');
+		sendProgressClick(progress, 'click');
+	}
 	// document.getElementById('progressBar').value = progress;
 };
 
-function sendProgressClick(progress) {
+function onProgressMove(event) {
+	var elem = document.getElementById('nowplaying-progress');
+	var pageX = event.touches[0].pageX;
+	var offsetLeft = 0;
+	var offsetWidth = 0;
+	var rect = elem.getBoundingClientRect();
+	if (!!rect) {
+		offsetLeft = rect.left;
+		offsetWidth = rect.width;
+	}
+	if (pageX > offsetLeft) {
+		var offsetX = pageX - offsetLeft;
+		console.log('Called onProgressMove() PageX = ' + pageX + ' OffsetX = ' + offsetX + ' Left = ' + offsetLeft + ' Width = ' + offsetWidth);
+		var progress = offsetX * 100.0 / offsetWidth;
+		if (progress > 0.0 && progress < 100.0) {
+			console.log('Called onProgressMove() Progress = ' + progress + ' %');
+			sendProgressClick(progress, 'slide');
+		}
+	}
+	// document.getElementById('progressBar').value = progress;
+};
+
+function sendProgressClick(progress, action) {
 
 	// Create JSON object
 	var data = {
 		OnProgressClick : "progress",
 		title : "progress",
 		prepare : "no",
+		action : action,
 		progress : progress
 	};
 	

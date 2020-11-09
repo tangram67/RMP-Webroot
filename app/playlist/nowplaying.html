@@ -144,7 +144,7 @@
 									<span class="label label-default pull-right">[[NOW_PLAYING_DURATION]]</span>
 								</h5>
 							</div>
-							<div id="nowplaying-progress" onclick="onProgressClick(event)" class="progress">
+							<div id="nowplaying-progress" onclick="onProgressClick(event)" ontouchmove="onProgressMove(event)" class="progress">
 								<div id="pgsNowplaying" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:[[NOW_PLAYING_PROGRESS]]%;">[[NOW_PLAYING_TIME]]</div>
 							</div>
 							<div id="nowplaying-buttons" class="text-center">
